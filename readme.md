@@ -3,7 +3,13 @@ Danish keyboard layout based on ANSI:
 
 ![](layout.png)
 
-This layout adds the danish Æ, Ø and Å symbols to the ANSI / US keyboard layout. The ANSI layout is much more convenient for programmers than the normal Danish ISO layout. Symbols frequently uses such as `{} []` are hidden in the danish layout on layer 3 in the numbers 7 - 0. The ANSI layout have them as first class citizens on layer 1 and 2 on dedicated keys. Hoever for Danish these keys are used for the accent symbols and therefore not available. So the compromise in `Dwerty` is to put them on layer 3 and 4 on the same keys, and for convenience also on layer 3 on `o` and `p`. Take a look at the `layout.png` if this makes sense to you. Otherwise it's easy to modify the layout text file.
+This layout adds the danish Æ, Ø and Å symbols to the ANSI / US keyboard layout. The ANSI layout is much more convenient for programmers than the normal Danish ISO layout. 
+
+Symbols frequently uses such as `{} []` are hidden in the danish layout on layer 3 in the numbers 7 - 0. The ANSI layout have them as first class citizens on layer 1 and 2 on dedicated keys. Hoever for Danish these keys are used for the accent symbols and therefore not available. So the compromise in `Dwerty` is to put them on layer 3 and 4 on the same keys, and for convenience also on layer 3 on `o` and `p`. 
+
+The ISO `<>` key next to the `Z` button is not available on ANSI. These sit on the `,` and `.` buttons. Also the `;` and `:` button on ANSI is used on danish for the `æ` accent symbol. The compromise is to keep the danish mapping for `;` and `:` on the layer 2 of `,` and `.`, and move `<>` to layer 3, as this is lesser used (pun intended) - but still keeps their ANSI position 
+
+Take a look at the `layout.png` if this makes sense to you. Otherwise it's easy to modify the layout text file.
 
 Credits
 --
@@ -39,7 +45,10 @@ Add the following variant block after the line <variantList>:
 ```
 
 Finally, after the line "! variant" in the file /usr/share/X11/xkb/rules/evdev.lst add the following line:
+
+```
   dwerty          dk: Dwerty
+```
 
 Now Dwerty should show up as one of the alternative keyboard layouts for Danish 
 
